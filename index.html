@@ -115,6 +115,8 @@
         <section id="sign up"> 
         <div class="kolom">
             function validasi()
+		
+	
 		{
 			var cek = document.getElementById("email").value;
 			var ekspresi=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+([A-Za-z]{2,4})$/;
@@ -176,6 +178,20 @@
 		<input type="button" name="button" value="cek" onclick="validasi()">
 		<input type="reset" name="Reset" value="Reset"/>
 	</form>
+	 function validasi()
+		
+	
+		{
+			var cek = document.getElementById("email").value;
+			var ekspresi=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+([A-Za-z]{2,4})$/;
+			if(cek==""||ekspresi.test(cek)==false)
+			{
+				alert("email anda belum benar");
+				document.getElementById("email").focus();
+			}else{
+				alert("email anda sudah benar")
+			}
+		}
             </div>
           
     </section>
