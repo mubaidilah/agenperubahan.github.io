@@ -114,15 +114,68 @@
        
         <section id="sign up"> 
         <div class="kolom">
-            <p class="deskripsi" p align="center">Perundungan sosial #Perundungan sosial</p>
-            <h2 align="center">Perundungan sosial</h2>
-            <p align="center">Perundungan sosial adalah penindasan yang mengakibatkan merusak reputasi
-                atau hubungan seseorang. Intimidasi sosial ini mencakup berbohong, menyebarkan rumor negatif,
-                mempermalukan seseorang, dan mengucilkan seseorang. </p>
-            <p align="center"><a href=""class="tbl-pink">pelajari lebih lanjut</a></p>
-            <img data-aos="fade-down" border="0" src="bully 6.jpg" width="450" hoght="500"</p>
-            <img data-aos="fade-down" border="0" src="bully 5.jfif" width="450" hoght="500"</p>
-            <img data-aos="fade-down" border="0" src="bully 9.jfif" width="450" hoght="500"</p>
+            function validasi()
+		{
+			var cek = document.getElementById("email").value;
+			var ekspresi=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+([A-Za-z]{2,4})$/;
+			if(cek==""||ekspresi.test(cek)==false)
+			{
+				alert("email anda belum benar");
+				document.getElementById("email").focus();
+			}else{
+				alert("email anda sudah benar")
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Validasi Email</h1>
+	<form name="formku">Masukan Email<input type="text" name="email" id="email"><br>
+		<input type="button" name="button" value="cek" onclick="validasi()">
+		<input type="reset" name="Reset" value="Reset"/>
+	</form>
+    <title>Validasi Nama</title>
+	<script type="text/javascript" language="javascript">
+		function validasi()
+		{
+			var cek = document.forms["formku"]["teks"].value;
+			if (!/^[a-zA-Z]+$/.test(cek))
+			{
+				alert("Data yang diinput harus berupa huruf");
+				document.getElementById("teks").focus();
+				document.formku.teks.value="";
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Validasi Nama</h1>
+	<form name="formku">Masukan Nama<input type="text" name="teks" id="teks"><br>
+		<input type="button" name="button" value="cek" onclick="validasi()">
+		<input type="reset" name="Reset" value="Reset"/>
+	</form>
+    <title>Validasi NIK</title>
+	<script type="text/javascript" language="javascript">
+		function validasi()
+		{
+			var cek = document.forms["formku"]["bil1"].value;
+			if (!/^[0-9]+$/.test(cek))
+			{
+				alert("Data yang diinput harus berupa numerik");
+				document.getElementById("bil1").focus();
+				document.formku.bil1.value="";
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Validasi NIK</h1>
+	<form name="formku">Masukan NIKS<input type="text" name="bil1" id="bil1"><br>
+		<input type="button" name="button" value="cek" onclick="validasi()">
+		<input type="reset" name="Reset" value="Reset"/>
+	</form>
             </div>
           
     </section>
