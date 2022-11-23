@@ -181,27 +181,7 @@
          <p align="justify">Tidak hanya fokus kepada korban kita juga perlu berbicara dengan pelaku bullying untuk menghentikan  tindakan perundungan.Pelaku bullying umumnya melakukan tindakan tak terpuji ini karena tidak memiliki rasa empati atau memiliki masalah keluarga di rumah. Jika ini kasusnya, bantulah mereka untuk mengatasi masalah tersebut. Selain itu, pelaku bullying juga perlu memahami bahwa tindakan mereka termasuk dalam kategori bullying. Kemudian,  mereka juga harus tahu bahwa perundungan dapat membahayakan kesehatan mental dan bahkan fisik korbannya. </p>
          <center><h2><smal>Jika ada tindakan bullying kepada anda mohon hubungi saya</smal></h2></center>
 	    
-	  function validasi()  {
-    var cek = document.forms["formku"]["teks"].value;
-    var cek2 = document.forms["formku"]["bil1"].value;
-    var cek3 = document.getElementById("email").value;
-    var ekspresi=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-    if (!/^[a-z A-Z]+$/.test(cek)) {
-        alert("Kolom Nama harus diisi dengan huruf!!");
-        document.getElementById("teks").focus();
-        return false;
-    }
-    else if (!/^[0-9]+$/.test(cek2)) {
-      alert("Kolom NIK harus diisi dengan angka!");
-      document.getElementById("bil1").focus();
-    }
-    else if (cek3==""||ekspresi.test(cek3)==false)
-    {
-    alert("Kolom Email harus diisi dengan format Email yang benar!");
-    document.getElementById("email").focus();
-    }
-}
+	 
 	    
     <!--Form-->
  <section id="Contact">
@@ -214,7 +194,6 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="alert alert-success alert-dismissible just fade show d-none my-alert" role="alert">
-          <strong>TERIMAKASIH</strong> atas sarannya.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <form name="formku">
@@ -255,7 +234,7 @@
           <input type="email" class="form-control" id="email" aria-describedby="email" name="email"/>
         </div>
             <div class="mb-3">
-              <label for="pesan" class="form-label">Kritik, Saran & Pesan</label>
+              <label for="pesan" class="form-label">Pesan Anda</label>
               <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
             </div>
           <button type="submit" class="btn btn-primary btn-kirim" onclick="validasi()">Kirim</button>
