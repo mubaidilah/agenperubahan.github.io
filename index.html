@@ -181,100 +181,7 @@
          <p align="justify">Tidak hanya fokus kepada korban kita juga perlu berbicara dengan pelaku bullying untuk menghentikan  tindakan perundungan.Pelaku bullying umumnya melakukan tindakan tak terpuji ini karena tidak memiliki rasa empati atau memiliki masalah keluarga di rumah. Jika ini kasusnya, bantulah mereka untuk mengatasi masalah tersebut. Selain itu, pelaku bullying juga perlu memahami bahwa tindakan mereka termasuk dalam kategori bullying. Kemudian,  mereka juga harus tahu bahwa perundungan dapat membahayakan kesehatan mental dan bahkan fisik korbannya. </p>
          <center><h2><smal>Jika ada tindakan bullying kepada anda mohon hubungi saya</smal></h2></center>
 	    
-	  <div class="container">
-          <div class="row text-center mb-3">
-            <div class="col">
-              <h2>Contact Me</h2>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-md-6">
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Nama Lengkap :</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name"/>
-                </div> 
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email       :</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="email"/>
-                </div>  
-                <div class="mb-3">
-                  <label for="pesan" class="form-label">Pesan       :</label>
-                  <textarea class="form-control" id="pesan" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Kirim</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-	   
-	   <script>
-	  function validasi()
-		{
-			var cek = document.getElementById("email").value;
-			var ekspresi=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+([A-Za-z]{2,4})$/;
-			if(cek==""||ekspresi.test(cek)==false)
-			{
-				alert("email anda belum benar");
-				document.getElementById("email").focus();
-			}else{
-				alert("email anda sudah benar")
-			}
-		}
-	</script>
-</head>
-<body>
-	<h1>Validasi Email</h1>
-	<form name="formku">Masukan Email<input type="text" name="email" id="email"><br>
-		<input type="button" name="button" value="cek" onclick="validasi()">
-		<input type="reset" name="Reset" value="Reset"/>
-	</form>
-    <title>Validasi Nama</title>
-	<script type="text/javascript" language="javascript">
-		function validasi()
-		{
-			var cek = document.forms["formku"]["teks"].value;
-			if (!/^[a-zA-Z]+$/.test(cek))
-			{
-				alert("Data yang diinput harus berupa huruf");
-				document.getElementById("teks").focus();
-				document.formku.teks.value="";
-				return false;
-			}
-		}
-	</script>
-</head>
-<body>
-	<h1>Validasi Nama</h1>
-	<form name="formku">Masukan Nama<input type="text" name="teks" id="teks"><br>
-		<input type="button" name="button" value="cek" onclick="validasi()">
-		<input type="reset" name="Reset" value="Reset"/>
-	</form>
-    <title>Validasi NIK</title>
-	<script type="text/javascript" language="javascript">
-		function validasi()
-		{
-			var cek = document.forms["formku"]["bil1"].value;
-			if (!/^[0-9]+$/.test(cek))
-			{
-				alert("Data yang diinput harus berupa numerik");
-				document.getElementById("bil1").focus();
-				document.formku.bil1.value="";
-				return false;
-			}
-		}
-	</script>
-</head>
-<body>
-	<h1>Validasi NIK</h1>
-	<form name="formku">Masukan NIKS<input type="text" name="bil1" id="bil1"><br>
-		<input type="button" name="button" value="cek" onclick="validasi()">
-		<input type="reset" name="Reset" value="Reset"/>
-	</form>
-	
-	<script>
-      function validasi()  {
+	  function validasi()  {
     var cek = document.forms["formku"]["teks"].value;
     var cek2 = document.forms["formku"]["bil1"].value;
     var cek3 = document.getElementById("email").value;
@@ -295,7 +202,68 @@
     document.getElementById("email").focus();
     }
 }
-    </script>
-	
+	    
+    <!--Form-->
+ <section id="Contact">
+  <div class="container kontakto">
+    <div class="row text-center mb-3">
+      <div class="col">
+        <h2>Kotak Pesan</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="alert alert-success alert-dismissible just fade show d-none my-alert" role="alert">
+          <strong>TERIMAKASIH</strong> atas sarannya.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <form name="formku">
+          <div class="mb-3">
+            <label for="Name" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="teks" aria-describedby="name" name="teks"/>
+          </div>
+
+          <div class="mb-3">
+            <label for="nik" class="form-label">NIK</label>
+            <input type="text" class="form-control" id="bil1" aria-describedby="name" name="bil1"/>
+          </div>
+
+          <div class="mb-3">
+          <label for="jenis" class="form-label">Jenis kelamin</label>
+          <select class="form-select" aria-label="Default select example" name="jenis kelamin">
+            <option selected> </option>
+            <option value="Laki-Laki">Laki-Laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+        </div>
+
+        <div>
+        <label for="jenis" class="form-label">Profesi</label> <br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="pilih" id="inlineRadio1" value="murid">
+          <label class="form-check-label" for="inlineRadio1">Murid</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="pilih" id="inlineRadio1" value="guru">
+          <label class="form-check-label" for="inlineRadio1">Guru</label>
+        </div>
+      </div>
+    
+      <!-- CheckBox  -->
+        <div class="mb-3 mt-4">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="email" name="email"/>
+        </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Kritik, Saran & Pesan</label>
+              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+            </div>
+          <button type="submit" class="btn btn-primary btn-kirim" onclick="validasi()">Kirim</button>
+          <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+        </section>
+<!--akhir contact-->
 </body>
 </html>
